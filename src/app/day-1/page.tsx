@@ -33,20 +33,9 @@ export default function Page() {
 
 function ShowIcon({ icon, className, onClick }: { icon: LucideIcon, className?: string, onClick?: () => void }) {
 
-    const [isLoading, setIsLoading] = useState(false);
-
-    function click() {
-        setIsLoading(true)
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 200)
-
-        // onClick();
-    }
     const Icon = icon;
     return (
         <div className="relative">
-            {/* {isLoading && <div className="absolute w-[80%] h-[80%] opacity-100 z-10 backdrop-blur-sm top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />} */}
             <Icon className={className} onClick={onClick} />
         </div>
     )
